@@ -8,24 +8,25 @@ void setup(){
 
 void draw(){
   color cc = img.get(mouseX,mouseY);
-  float br= brightness(cc);//get the color's bright
-  float hue=hue(cc);
-  if(mousePressed){
+  float br = brightness(cc); //get the color's bright
+  float hue = hue(cc);
+  if (mousePressed){
     noStroke();
     fill(cc,50);
     
-   ellipse(mouseX+random(-10,10),mouseY+random(-10,10),20,20);
+   ellipse(mouseX + random(-10,10), mouseY + random(-10,10), 20, 20); // 在滑鼠附近畫20*20的圓
    
    noStroke();
-   fill(0,255,0,120);
+   fill(0, 255, 0, 120);
   }
-  }
+}
+
 void keyPressed(){
- if(key=='b'){
-   background(0); //clean=create a new background 
+ if (key == 'b'){
+   background(0); // clean = create a new background 
  } 
- if(key=='s'){
-   save("a1.png");//put in "project name"
+ if (key == 's'){
+   save("a1.png"); //put in "project name"
  }
 
 }
